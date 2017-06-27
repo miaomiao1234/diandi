@@ -11,14 +11,14 @@ date_default_timezone_set("Asia/Shanghai");
 <div align="center">
   <form action="insert.php" method="post" /><br>
     <input type="text" name="date" value="<?php $d=strtotime("today");
-    echo data("y/m/d",$d); ?>" hidden />
+    echo date("y/m/d",$d); ?>" hidden />
     开始时间：
     <input type="text" name="start_time" value="<?php $d=strtotime("-25 Minutes");
-    echo date("h:i", $d) . "<br>"; ?>" />
+    echo date("H:i", $d) ; ?>" />
     <br><br>
     结束时间：
     <input type="text" name="end_time" value="<?php $d=strtotime("today");
-    echo date("h/i",$d); ?>" />
+    echo date("H:i"); ?>" />
     <br><br>
     任务名称：
     <input type="text" name="task"  />
