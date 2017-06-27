@@ -1,4 +1,5 @@
 <?php
+session_start();
 date_default_timezone_set("Asia/Shanghai");
 ?>
 <!DOCTYPE html>
@@ -11,7 +12,7 @@ date_default_timezone_set("Asia/Shanghai");
 <div align="center">
   <form action="insert.php" method="post" /><br>
     <input type="text" name="date" value="<?php $d=strtotime("today");
-    echo date("y/m/d",$d); ?>" hidden />
+    echo date("Y/m/d/l"); ?>" hidden />
     开始时间：
     <input type="text" name="start_time" value="<?php $d=strtotime("-25 Minutes");
     echo date("H:i", $d) ; ?>" />

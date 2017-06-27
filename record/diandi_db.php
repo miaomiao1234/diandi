@@ -6,4 +6,7 @@ if(!$con)
 }
 
  mysql_select_db("my_job", $con);
+ session_start();
+ date_default_timezone_set("Asia/Shanghai");
+
  ?>

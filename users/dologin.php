@@ -16,8 +16,9 @@ if(isset($row['password'])  && $row['password'] == $password ){
   $_SESSION['userid']=$row['userID'];
   $_SESSION['username']=$row['username'];
   $_SESSION['power']=$row['power'];
-  echo "登录成功！";
+  header('Location: ../record/index.php');
 }else{
-  echo "用户名或密码错误！";
+  header('Location: sigin.php');
+
 }
 ?>
