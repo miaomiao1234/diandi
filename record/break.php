@@ -1,6 +1,11 @@
 <?php
   require_once "diandi_db.php";
+  include "../tasklist/bootstrap.php";
+
   $result=mysql_query("SELECT * FROM diandis where state='0' ");
+
+  include_once "../common/_navbar.php";
+
 ?>
 <html>
   <head>
@@ -9,13 +14,14 @@
     </title>
   </head>
     <body>
-    <div align="center">
+    <div "container-fluid" align="center">
      <h1>打断的任务</h1>
-     <br><a href="index.php">历史</a>
-     <hr>
-     <a href="add.php">添加任务</a>
-     <table width="80%">
-       <tr align="center">
+     <div>
+       <a  class= "btn btn-primary pull-right" href="add.php">添加任务</a><br>
+   </div>
+
+     <table class= "table table-hover">
+       <tr>
          <th>日期</th>
          <th>时间</th>
          <th>任务名称</th>
@@ -27,7 +33,7 @@
        while ($row=mysql_fetch_array($result))
        {
          ?>
-       <tr align="center">
+       <tr>
          <td><?php echo $row['date'];?></td>
          <td><?php echo $row['start_time'] ."-" .$row['end_time'] ;?></td>
          <td><?php echo $row['task'];?></td>

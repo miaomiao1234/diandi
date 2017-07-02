@@ -56,29 +56,33 @@ echo $_SESSION['username'];
     </style>
 
   </head>
+
+
 <body>
-  <div align="center">
-  <fieldset>
-    <legend>用户登录</legend>
-    <form name="loginform" method="post" action="dologin.php" onSumbmit="return InputCheck(this)">
-    <p>
-    <label for="username" class="label">用户名：</label>
-    用户名：
-    <input id="username" name="username" type="text" class="input" />
-    <p/>
-    <p>
-    <label for="password" class="label">密码：</label>
-    密码：
-    <input id="password" name="password" type="password" class="input" />
-    <p/>
-    <p>
-    <input id="power" name="power" type="tinyint" value="2" class="input" hidden>
-    <p/>
-    <p>
-    <input type="submit" name="submit" value="确定" class="left">
-    </p>
+  <div class="container">
+
+    <form class="form-signin" action="dologin.php" method="post"  >
+
+      <h2 class="form-signin-heading">用户登录</h2>
+      <label for="inputusername" class="sr-only">用户名</label>
+      <input type="text" name="username" class="form-control" placeholder="username" required autofocus>
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" name="password" class="form-control" placeholder="Password" required>
+      <div class="checkbox">
+        <p>
+        <p/>
+
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
     </form>
-  </fieldset>
-  </div>
+
+  </div> <!-- /container -->
+
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 </body>
 </html>

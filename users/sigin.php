@@ -52,7 +52,7 @@
 
   </head>
 <body>
-  <div align="center">
+<!--  <div align="center">
   <fieldset>
     <legend>用户注册</legend>
     <form  action="insert.php" method="post"  >
@@ -78,5 +78,33 @@
     </form>
   </fieldset>
   </div>
+-->
+
+      <div class="container">
+
+        <form class="form-signin" action="insert.php" method="post"  >
+
+          <h2 class="form-signin-heading">请注册</h2>
+          <label for="inputusername" class="sr-only">用户名</label>
+          <input type="text" name="username" class="form-control" placeholder="username" required autofocus>
+          <label for="inputPassword" class="sr-only">Password</label>
+          <input type="password" name="password" class="form-control" placeholder="Password" required>
+          <div class="checkbox">
+            <p>
+            <input  name="power" type="text" value="2"  hidden/>
+            <p/>
+
+            <label>
+              <input type="checkbox" value="remember-me"> Remember me
+            </label>
+          </div>
+          <button class="btn btn-lg btn-primary btn-block" type="submit">注册</button>
+        </form>
+
+      </div> <!-- /container -->
+
+
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 </body>
 </html>
